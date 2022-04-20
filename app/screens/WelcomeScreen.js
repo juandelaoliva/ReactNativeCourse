@@ -54,4 +54,5 @@ const styles = StyleSheet.create({
   },
 });
 
+// Test
 export default WelcomeScreen;
