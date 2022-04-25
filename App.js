@@ -1,13 +1,8 @@
-import { StyleSheet, SafeAreaView, View, Platform } from "react-native";
-import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
+import React from "react";
 
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import Card from "./app/components/Card";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
 
 export default function App() {
-  return <ViewImageScreen />;
+  return <ListingEditScreen></ListingEditScreen>;
 }
-
-const styles = StyleSheet.create({});

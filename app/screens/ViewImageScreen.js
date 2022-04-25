@@ -1,50 +1,45 @@
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from "../config/colors";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import { Colors } from "react-native/Libraries/NewAppScreen";
 
 function ViewImageScreen(props) {
   return (
     <View style={styles.container}>
-      <View style={[styles.icon, styles.closeIcon]}>
-        <MaterialCommunityIcons
-          name="close"
-          color={colors.white}
-          size={35}
-        ></MaterialCommunityIcons>
+      <View style={styles.closeIcon}>
+        <MaterialCommunityIcons name="close" color="white" size={35} />
       </View>
-      <View style={[styles.icon, styles.deleteIcon]}>
+      <View style={styles.deleteIcon}>
         <MaterialCommunityIcons
           name="trash-can-outline"
-          color={colors.white}
+          color="white"
           size={35}
-        ></MaterialCommunityIcons>
+        />
       </View>
       <Image
         resizeMode="contain"
         style={styles.image}
         source={require("../assets/chair.jpg")}
-      ></Image>
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  closeIcon: {
+    position: "absolute",
+    top: 40,
+    left: 30,
+  },
   container: {
     backgroundColor: colors.black,
     flex: 1,
   },
-  closeIcon: {
-    left: 30,
-  },
   deleteIcon: {
-    right: 30,
-  },
-  icon: {
     position: "absolute",
-    top: 45,
+    top: 40,
+    right: 30,
   },
   image: {
     width: "100%",
